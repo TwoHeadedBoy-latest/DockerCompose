@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Hoja de Presentación</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="resources/profilePhoto.png" alt="Mi foto" class="profile-img">
+            <h1>Hola, soy <span id="nombre"></span></h1>
+            <p>Desarrollador Backend, entusiasta de la tecnología y apasionado por el código.</p>
+            <button id="btn-toggle">Ver más</button>
+        </div>
+    </header>
+
+    <section id="about" class="hidden">
+        <h2>Acerca de mí</h2>
+        <p>Me encanta aprender nuevas tecnologías y mejorar mis habilidades constantemente. Trabajo en proyectos personales y colaborativos para crecer como profesional. Soy un fanatico del software libre y me gusta mucho la terminal de Linux. </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contacta conmigo</h2>
+        <ul class="social-links">
+            <!--
+            <li><a id="facebookLink" href="https://www.facebook.com/InTheAeroplaneOverTheSeaa" target="_blank">Facebook</a></li>
+            <li><a id="linkedinUser" href="https://www.linkedin.com/in/ricardo-miron-carmona" target="_blank">LinkedIn</a></li>
+            <li><a id="gitlabUser" href="https://gitlab.com/TwoHeadedBoy" target="_blank">GitLab</a></li>
+            <li><a id="githubUser" href="https://github.com/TwoHeadedBoy-latest" target="_blank">GitHub</a></li>
+            -->
+            <li><a id="facebookLink" href="#" target="_blank">Facebook</a></li>
+            <li><a id="linkedinUser" href="#" target="_blank">LinkedIn</a></li>
+            <li><a id="gitlabUser" href="#" target="_blank">GitLab</a></li>
+            <li><a id="githubUser" href="#" target="_blank">GitHub</a></li>
+        
+        </ul>
+    </section>
+
+    <footer>
+        <p id="author"></p>
+    </footer>
+
+    <script>
+        const btnToggle = document.getElementById('btn-toggle');
+        const aboutSection = document.getElementById('about');
+
+        btnToggle.addEventListener('click', () => {
+            aboutSection.classList.toggle('hidden');
+
+            if (aboutSection.classList.contains('hidden')) {
+                btnToggle.textContent = 'Ver más';
+            } else {
+                btnToggle.textContent = 'Ver menos';
+            }
+        });
+    </script>
+    <script type="text/javascript" src="js/requests.js"></script>
+</body>
+</html>
